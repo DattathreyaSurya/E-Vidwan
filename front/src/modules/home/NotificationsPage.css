@@ -1,0 +1,219 @@
+.notifications-page {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+}
+
+.notifications-page h2 {
+  color: #393e46;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: background 0.2s;
+}
+
+.notification-item.read {
+  background: #eeeeee;
+}
+
+.notification-main {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.notification-type {
+  font-size: 0.95rem;
+  color: #929aab;
+  background: #e3f2fd;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 0.5rem;
+}
+
+.notification-message {
+  color: #393e46;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.notification-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  color: #929aab;
+}
+
+.notification-date {
+  font-size: 0.92rem;
+}
+
+.mark-read-btn {
+  background: #393e46;
+  color: #f7f7f7;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+
+.mark-read-btn:hover {
+  background: #929aab;
+}
+
+.no-notifications {
+  color: #929aab;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.loading, .error {
+  text-align: center;
+  color: #393e46;
+  padding: 2rem 0;
+} 
+
+/* Action buttons at the top */
+.notification-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-end;
+}
+
+.mark-all-btn,
+.delete-all-btn {
+  background: #393e46;
+  color: #f7f7f7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mark-all-btn:hover {
+  background: #929aab;
+  color: #393e46;
+}
+
+.delete-all-btn {
+  background: #d72323;
+  color: #fff;
+}
+
+.delete-all-btn:hover {
+  background: #393e46;
+  color: #fff;
+}
+
+/* Per-notification delete button */
+.delete-btn {
+  background: #fff;
+  color: #d72323;
+  border: 1px solid #d72323;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d72323;
+  color: #fff;
+}
+
+/* Modal styles */
+.modal-overlay-notification {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(57, 62, 70, 0.25);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content-notification {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 32px rgba(57,62,70,0.18);
+  max-width: 400px;
+  width: 100%;
+  color: #393e46;
+}
+.modal-content-notification h4 {
+  margin-top: 0;
+  color: #d72323;
+}
+.modal-actions-notification {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.btn.btn-secondary {
+  background: #929aab;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn.btn-secondary:hover {
+  background: #393e46;
+  color: #fff;
+}
+.btn.btn-danger {
+  background: #d72323;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn.btn-danger:hover {
+  background: #393e46;
+  color: #fff;
+}
+.text-danger {
+  color: #d72323;
+}
+
+.mark-all-btn:disabled,
+.delete-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

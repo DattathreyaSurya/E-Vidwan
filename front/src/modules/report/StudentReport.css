@@ -1,0 +1,64 @@
+/* Color Palette */
+.first-color { background-color: #f7f7f7; }
+.second-color { background-color: #eeeeee; }
+.third-color { color: #393e46; }
+.fourth-color { color: #929aab; }
+
+/* Dashboard Layout */
+.student-dashboard {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.dashboard-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+.card-section {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(57, 62, 70, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(57, 62, 70, 0.15);
+}
+
+/* Star Ratings */
+.star {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #facc15;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 6px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Responsive Tweak */
+@media (max-width: 768px) {
+  .dashboard-heading {
+    font-size: 22px;
+  }
+  .section-title {
+    font-size: 18px;
+  }
+}

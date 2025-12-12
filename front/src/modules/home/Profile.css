@@ -1,0 +1,239 @@
+/* Color Palette Reference */
+:root {
+    --first-color: #f7f7f7;
+    --second-color: #eeeeee;
+    --third-color: #393e46;
+    --fourth-color: #929aab;
+  }
+  
+  .profile-page {
+    background: rgba(255,255,255,0.92);
+    max-width: 650px;
+    margin: 2.5rem auto;
+    border-radius: 22px;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(57, 62, 70, 0.13), 0 1.5px 0 var(--second-color) inset;
+    color: var(--third-color);
+    border: 2.5px solid var(--second-color);
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+
+  .profile-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    pointer-events: none;
+    box-shadow: 0 0 0 8px var(--first-color) inset;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  
+  .profile-page h2 {
+    color: var(--third-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Quicksand', 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .profile-page p {
+    margin: 0.25rem 0 0.5rem 0;
+    color: var(--fourth-color);
+    font-size: 1rem;
+  }
+  
+  .profile-page strong {
+    color: var(--third-color);
+  }
+  
+  .profile-page hr {
+    border: none;
+    border-top: 1.5px solid var(--second-color);
+    margin: 1.5rem 0;
+  }
+  
+  .profile-page h4 {
+    color: var(--third-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', 'Quicksand', sans-serif;
+  }
+  
+  .profile-page ul {
+    list-style: disc inside;
+    margin: 0 0 1rem 0.5rem;
+    padding: 0;
+    color: var(--third-color);
+  }
+  
+  .profile-page li {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    color: var(--third-color);
+  }
+  
+  .achievements-section {
+    background: linear-gradient(120deg, var(--second-color) 80%, var(--first-color) 100%);
+    border-radius: 16px;
+    padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+    margin: 2.2rem auto 0 auto;
+    max-width: 650px;
+    box-shadow: 0 2px 16px rgba(146, 154, 171, 0.10);
+    border: 1.5px solid var(--fourth-color);
+    position: relative;
+  }
+  
+  .achievements-section h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--third-color);
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+  }
+
+  .achievements-section p {
+    margin: 0.3rem 0;
+    color: var(--third-color);
+  }
+  
+  .badge-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .badge-list span {
+    /* background: var(--third-color);
+    color: var(--first-color); */
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin-right: 8px;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  /* ...existing code... */
+
+  .badge-trophy {
+    display: inline-flex;
+    align-items: center;
+    background: var(--third-color);
+    color: var(--first-color);
+    border-radius: 18px;
+    padding: 6px 16px 6px 10px;
+    margin-right: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(57, 62, 70, 0.08);
+    transition: transform 0.15s;
+    cursor: pointer;
+    min-width: 0;
+    position: relative;
+  }
+  
+  .badge-trophy:hover,
+  .badge-trophy:focus {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(255, 179, 0, 0.15);
+  }
+  
+  .trophy-icon {
+    color: gold;
+    margin-right: 8px;
+    font-size: 1.2em;
+    filter: drop-shadow(0 1px 2px #393e4633);
+  }
+  
+  /* Tooltip remains as your palette (blue/grey) */
+  .badge-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    max-width: 260px;
+    background: linear-gradient(90deg, var(--second-color) 40%, var(--fourth-color) 100%);
+    color: var(--third-color);
+    text-align: left;
+    border-radius: 12px;
+    padding: 14px 20px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 110%;
+    top: auto;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 8px 32px rgba(57, 62, 70, 0.18);
+    border: 2px solid var(--third-color);
+    transition: opacity 0.18s, visibility 0.18s;
+    pointer-events: none;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    margin-bottom: 8px;
+  }
+
+  .badge-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--third-color) transparent transparent transparent;
+    filter: drop-shadow(0 2px 2px rgba(57,62,70,0.10));
+  }
+  
+  .badge-tooltip-parent:hover .badge-tooltip,
+  .badge-tooltip-parent:focus .badge-tooltip {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 100;
+  }
+
+
+
+@media (max-width: 700px) {
+  .badge-list {
+    gap: 6px;
+  }
+  .badge-trophy {
+    font-size: 0.95rem;
+    padding: 5px 10px 5px 7px;
+    margin-right: 4px;
+  }
+  .trophy-icon {
+    margin-right: 5px;
+    font-size: 1em;
+  }
+  .badge-tooltip {
+    font-size: 0.93rem;
+    padding: 10px 10px;
+    max-width: 90vw;
+  }
+}
+  
+  @media (max-width: 700px) {
+    .profile-page, .achievements-section {
+      max-width: 98vw;
+      padding: 1rem 0.5rem 1.5rem 0.5rem;
+    }
+    .profile-page h2 {
+      font-size: 1.3rem;
+    }
+    .profile-page h4 {
+      font-size: 1rem;
+    }
+  }
+
+  

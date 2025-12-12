@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+ 
+* {
+  font-family: 'quicksand', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+ 
+.form-select-wrapper {
+  position: relative;
+  display: inline-block; /* Ensures the wrapper doesn't expand */
+  width: 100%; /* Keep the wrapper width consistent with the select field */
+}
+ 
+.form-select-wrapper .fa-caret-down {
+  position: absolute;
+  right: 15px; /* Adjust the right position as needed */
+  top: 50%; /* Center the icon vertically */
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent interaction with the icon */
+  color: #393e46; /* Match the color of the dropdown */
+}
+ 
+.form-select {
+  width: 100%; /* Keep the select element's width unchanged */
+  appearance: none; /* Remove default browser dropdown styling */
+  padding-right: 40px; /* Add padding to make space for the icon */
+  font-size: 1em; /* Match the font size of other fields */
+  padding: 1.2em; /* Match the padding of other fields */
+  margin: 0.6em 0; /* Match the margin of other fields */
+  border-radius: 20px; /* Match the border radius of other fields */
+  border: 1px solid #929aab; /* Match the border style of other fields */
+  background: #eeeeee; /* Match the background color of other fields */
+  color: #393e46; /* Match the text color of other fields */
+  font-weight: bold; /* Match the font weight of other fields */
+}
+ 
+.form-modal {
+  position: relative;
+  width: 450px;
+  margin: 4em auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+.formData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+ 
+.form-toggle button {
+  width: 50%;
+  padding: 1.5em;
+  font-weight: bold;
+  border: none;
+  transition: 0.2s;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #393e46;
+  color: white;
+}
+ 
+.form-toggle button:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+ 
+.form-toggle button:hover {
+  background-color: #929aab;
+}
+ 
+.form-modal form {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+ 
+.form-modal input,
+.form-modal select {
+  width: 100%;
+  font-size: 1em;
+  padding: 1.2em;
+  margin: 0.6em 0;
+  border-radius: 20px;
+  border: 1px solid #929aab;
+  background: #eeeeee;
+  color: #393e46;
+  font-weight: bold;
+}
+ 
+/* Login Button */
+.login {
+  width: 100%; /* Match the width of form fields */
+  font-size: 1em; /* Match the font size of form fields */
+  padding: 1.2em; /* Match the padding of form fields */
+  margin: 0.6em 0; /* Match the margin of form fields */
+  border-radius: 20px; /* Match the border radius of form fields */
+  border: none; /* Remove border for a clean look */
+  background-color: #000000; /* Blue color for login button */
+  color: white; /* White text for contrast */
+  font-weight: bold; /* Bold text for emphasis */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+ 
+.login:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+ 
+.form-modal .btn {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: 0.5s;
+}
+ 
+.-box-sd-effect:hover {
+  box-shadow: 0 4px 8px hsla(210, 2%, 84%, .2);
+}
+ 
+.form-modal p {
+  font-size: 16px;
+  font-weight: bold;
+}
+ 
+.form-modal p a {
+  color: #393e46;
+  text-decoration: none;
+}
+ 
+.form-modal p a:hover {
+  color: #929aab;
+}
+ 
+/* Active toggle button */
+.active-toggle {
+  background-color: #393e46;
+  color: #fff;
+}
+ 
+/* Inactive toggle button */
+.inactive-toggle {
+  background-color: #eeeeee;
+  color: #393e46;
+}
+ 
+/* Back to Login Button */
+.back-to-login, .send-otp, .reset-password {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+ 
+.back-to-login:hover {
+  background-color: #5a6268;
+}
+ 
+.forgot-password-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+ 
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+ 
+@media only screen and (max-width: 500px) {
+  .form-modal {
+    width: 100%;
+  }
+}
